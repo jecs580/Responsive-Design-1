@@ -1,0 +1,57 @@
+body {
+  /* border: 1px solid red; */
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #151821;
+}
+:root {
+  --lime-Green: hsl(163, 72%, 41%);
+  --bright-Red: hsl(356, 69%, 56%);
+  --facebook: #168ef4;
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --instagram-1: hsl(37, 97%, 70%);
+  --instagram-1: hsl(329, 70%, 58%);
+  --youTube: hsl(348, 97%, 39%);
+  --gray: #aeb2cc;
+  --toggle: hsl(230, 22%, 74%);
+}
+
+.card {
+  /* border-top: 1px solid blue; */
+  /* width: 400px; */
+  overflow: hidden;
+  border-radius: 5px;
+  background: #f0f3fa;
+  text-align: center;
+}
+.card::before {
+  content: "";
+  height: 4px;
+  display: block;
+  background: var(--facebook);
+}
+.wrapper {
+  padding: 0 30px;
+}
+.card-title {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6f717e;
+}
+.card-title img {
+  margin-right: 8px;
+}
+.card-followers {
+  border: 1px solid blue;
+}
+.card-followers-number {
+  font-size: 50px;
+  font-weight: 700;
+}
+.card-followers-title {
+  display: block; /* Especificamos q este elemento empieze en una nueva linea*/
+  text-transform: uppercase;
+}
