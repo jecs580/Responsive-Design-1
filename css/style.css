@@ -20,6 +20,7 @@ body {
 /* header */
 .header {
   /* border: 1px solid red; */
+  /* display: none; */
   background: #f8f9fe;
   padding-bottom: 100px;
   border-radius: 0 0 20px 20px;
@@ -33,6 +34,7 @@ body {
   color: var(--gray);
   font-weight: 700;
   margin: 0.4em 0;
+  font-size: 0.85em;
   border-bottom: 1px solid var(--gray);
   padding-bottom: 1.5em;
 }
@@ -41,11 +43,12 @@ body {
 }
 .grid {
   display: grid;
-  grid-row-gap: 36px;
+  grid-row-gap: 26px;
 }
 .top-card {
   /* border: 1px solid green; */
   margin-top: -50px;
+  /* display: none; */
 }
 .card {
   /* border: 1px solid blue; */
@@ -118,12 +121,75 @@ body {
   margin-top: 22px;
   color: var(--lime-Green);
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 0.74em;
   letter-spacing: 0.7px;
 }
 .card-today.youtube {
-  color: var(--youTube);
+  color: var(--bright-Red);
 }
 .card-today img {
   margin-right: 0.5em;
+}
+
+/* Overview */
+.overview {
+  padding-bottom: 3em;
+}
+.title-overview {
+  color: var(--gray);
+  font-size: 1.45em;
+  margin-top: 2em;
+  margin-bottom: 1.3em;
+}
+.grid-overview {
+  display: grid;
+  grid-row-gap: 20px;
+}
+.card-small {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  background: #f0f3fa;
+  border-radius: 4px;
+  padding: 1.7em;
+}
+.card-small p {
+  margin: 0;
+}
+.card-small-views {
+  /* border: 1px solid purple; */
+  color: var(--gray);
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.card-small-icon {
+  text-align: right;
+  /* border: 1px solid yellow; */
+}
+.card-small-number {
+  /* border: 1px solid teal; */
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 0.9em;
+}
+.card-small-porcentage {
+  /* border: 1px solid green; */
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: var(--lime-Green);
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.card-small-porcentage.red {
+  color: var(--bright-Red);
+}
+.card-small-porcentage span {
+  display: flex;
+  align-items: center;
+}
+.card-small-porcentage img {
+  margin-right: 3px;
 }
