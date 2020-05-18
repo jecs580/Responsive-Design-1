@@ -16,10 +16,12 @@ body {
   --youTube: hsl(348, 97%, 39%);
   --gray: #5f616d;
   --cardGray: #f0f3fa;
-  --toggle: hsl(230, 22%, 74%);
+  --toggle1: hsl(230, 22%, 74%);
   /* Dark Theme */
 
   --toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  --toggle-1: hsl(210, 78%, 56%);
+  --toggle-2: hsl(146, 68%, 55%);
   /* (BG) */
   --very-Dark-Blue: hsl(230, 17%, 14%);
   /* (Top BG Pattern) */
@@ -27,6 +29,49 @@ body {
   --dark-Desaturated-Blue: hsl(228, 28%, 20%);
   --desaturated-Blue: hsl(228, 34%, 66%);
   --white: hsl(0, 0%, 100%);
+}
+.dark-mode {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dark-mode-title {
+  color: var(--desaturated-Blue);
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.checkbox {
+  display: none;
+}
+.checkbox:checked ~ .switch::before {
+  transform: translate(0px);
+}
+.switch {
+  /* border: 1px solid red; */
+  display: block;
+  height: 25px;
+  border-radius: 50px;
+  background: var(--toggle1);
+  width: 50px;
+  padding: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none; /*Evita selecionar texto al momento de hacer muchos clicks*/
+  /* align-items: flex-start;
+  justify-content: center;
+  flex-direction: column; */
+}
+.switch::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  transform: translate(24px);
+  transition: 0.3s;
+  /* will-change: transform; */
 }
 /* header */
 .header {
@@ -48,6 +93,7 @@ body {
   font-size: 0.85em;
   border-bottom: 1px solid var(--gray);
   padding-bottom: 1.5em;
+  margin-bottom: 2px;
 }
 .wrapper {
   padding: 0 30px;
@@ -102,7 +148,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6d6f7d;
+  color: var(--desaturated-Blue);
   font-size: 0.75em;
   font-weight: bold;
 }
@@ -120,7 +166,7 @@ body {
 .card-followers-title {
   display: block; /* Especificamos q este elemento empieze en una nueva linea*/
   text-transform: uppercase;
-  color: var(--gray);
+  color: var(--desaturated-Blue);
   /* border: 1px solid black; */
   letter-spacing: 4.3px;
   font-size: 0.75em;
@@ -240,13 +286,17 @@ body {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr 145px;
+  }
+  .header-total {
+    border: none;
+  }
 }
 @media screen and (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-  .header-total {
-    border: none;
   }
 }
 
@@ -261,6 +311,16 @@ body {
   }
   .header {
     background: #20222f;
+  }
+  .switch {
+    background-image: linear-gradient(
+      to right,
+      var(--toggle-1),
+      var(--toggle-2)
+    );
+  }
+  .switch::before {
+    background: var(--very-Dark-Blue);
   }
   .card-title {
     color: var(--desaturated-Blue);
