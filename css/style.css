@@ -15,7 +15,18 @@ body {
   --instagram-2: hsl(329, 70%, 58%);
   --youTube: hsl(348, 97%, 39%);
   --gray: #5f616d;
+  --cardGray: #f0f3fa;
   --toggle: hsl(230, 22%, 74%);
+  /* Dark Theme */
+
+  --toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  /* (BG) */
+  --very-Dark-Blue: hsl(230, 17%, 14%);
+  /* (Top BG Pattern) */
+  --very-Dark-Blue-1: hsl(232, 19%, 15%);
+  --dark-Desaturated-Blue: hsl(228, 28%, 20%);
+  --desaturated-Blue: hsl(228, 34%, 66%);
+  --white: hsl(0, 0%, 100%);
 }
 /* header */
 .header {
@@ -55,7 +66,7 @@ body {
   /* width: 400px; */
   overflow: hidden;
   border-radius: 6px;
-  background: #f0f3fa;
+  background: var(--cardGray);
   text-align: center;
   padding: 1.5em 0;
   position: relative;
@@ -150,7 +161,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
-  background: #f0f3fa;
+  background: var(--cardGray);
   border-radius: 4px;
   padding: 1.7em;
 }
@@ -211,7 +222,11 @@ body {
   }
 
   .header {
-    padding-bottom: 70px;
+    padding-bottom: 120px;
+  }
+  .top-card {
+    /* border: 1px solid green; */
+    margin-top: -100px;
   }
   .header-total {
     letter-spacing: 1px;
@@ -232,5 +247,31 @@ body {
   }
   .header-total {
     border: none;
+  }
+}
+
+/* Modo Dark */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1d2029;
+    color: var(--white);
+  }
+  :root {
+    --cardGray: #252b43;
+  }
+  .header {
+    background: #20222f;
+  }
+  .card-title {
+    color: var(--desaturated-Blue);
+  }
+  .card-followers-title {
+    color: var(--desaturated-Blue);
+  }
+  .title-overview {
+    color: var(--white);
+  }
+  .card-small-views {
+    color: var(--desaturated-Blue);
   }
 }
