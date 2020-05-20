@@ -68,7 +68,7 @@ body {
   height: 20px;
   border-radius: 50%;
   background: var(--togle_ball);
-  transform: translate(24px);
+  transform: translate(25px);
   transition: 0.3s;
   /* will-change: transform; */
 }
