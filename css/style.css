@@ -49,11 +49,11 @@ body {
 .switch {
   /* border: 1px solid red; */
   display: block;
-  height: 25px;
+  height: 24px;
   border-radius: 50px;
   background: var(--switch-background);
   width: 50px;
-  padding: 3px;
+  padding: 2.5px;
   box-sizing: border-box;
   cursor: pointer;
   user-select: none; /*Evita selecionar texto al momento de hacer muchos clicks*/
