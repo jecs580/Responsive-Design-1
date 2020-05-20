@@ -53,7 +53,7 @@ body {
   border-radius: 50px;
   background: var(--switch-background);
   width: 50px;
-  padding: 2.5px;
+  padding: 1.83px;
   box-sizing: border-box;
   cursor: pointer;
   user-select: none; /*Evita selecionar texto al momento de hacer muchos clicks*/
@@ -68,7 +68,7 @@ body {
   height: 20px;
   border-radius: 50%;
   background: var(--togle_ball);
-  transform: translate(25px);
+  transform: translate(26px);
   transition: 0.3s;
   /* will-change: transform; */
 }
