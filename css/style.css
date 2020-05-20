@@ -150,6 +150,7 @@ body {
   color: var(--card-color);
   font-size: 0.75em;
   font-weight: bold;
+  margin: 12px 0;
 }
 .card-title img {
   margin-right: 8px;
