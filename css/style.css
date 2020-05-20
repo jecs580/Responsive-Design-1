@@ -3,9 +3,13 @@ body {
   /* border: 1px solid red; */
   margin: 0;
   font-family: "Inter", sans-serif;
-  color: #151821;
+  color: var(--body-color);
+  background: var(--body-background);
 }
 :root {
+  --body-background: #fff;
+  --body-color: #151821;
+  --header-background: #f8f9fe;
   --lime-Green: hsl(163, 72%, 41%);
   --bright-Red: hsl(356, 69%, 56%);
   --facebook: #168ef4;
@@ -16,19 +20,14 @@ body {
   --youTube: hsl(348, 97%, 39%);
   --gray: #5f616d;
   --cardGray: #f0f3fa;
-  --toggle1: hsl(230, 22%, 74%);
   /* Dark Theme */
-
-  --toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
   --toggle-1: hsl(210, 78%, 56%);
   --toggle-2: hsl(146, 68%, 55%);
-  /* (BG) */
-  --very-Dark-Blue: hsl(230, 17%, 14%);
-  /* (Top BG Pattern) */
-  --very-Dark-Blue-1: hsl(232, 19%, 15%);
-  --dark-Desaturated-Blue: hsl(228, 28%, 20%);
-  --desaturated-Blue: hsl(228, 34%, 66%);
-  --white: hsl(0, 0%, 100%);
+  /* Other Variables */
+  --switch-background: hsl(230, 22%, 74%);
+  --togle_ball: hsl(0, 0%, 100%);
+  --card-color: #5f616d;
+  --overview_color: #5f616d;
 }
 .dark-mode {
   /* border: 1px solid green; */
@@ -37,7 +36,7 @@ body {
   align-items: center;
 }
 .dark-mode-title {
-  color: var(--desaturated-Blue);
+  color: var(--card-color);
   font-weight: bold;
   font-size: 0.9em;
 }
@@ -52,7 +51,7 @@ body {
   display: block;
   height: 25px;
   border-radius: 50px;
-  background: var(--toggle1);
+  background: var(--switch-background);
   width: 50px;
   padding: 3px;
   box-sizing: border-box;
@@ -68,7 +67,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--white);
+  background: var(--togle_ball);
   transform: translate(24px);
   transition: 0.3s;
   /* will-change: transform; */
@@ -77,7 +76,7 @@ body {
 .header {
   /* border: 1px solid red; */
   /* display: none; */
-  background: #f8f9fe;
+  background: var(--header-background);
   padding-bottom: 100px;
   border-radius: 0 0 20px 20px;
   padding-top: 2em;
@@ -87,7 +86,7 @@ body {
   margin: 0;
 }
 .header-total {
-  color: var(--gray);
+  color: var(--card-color);
   font-weight: 700;
   margin: 0.4em 0;
   font-size: 0.85em;
@@ -148,7 +147,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--desaturated-Blue);
+  color: var(--card-color);
   font-size: 0.75em;
   font-weight: bold;
 }
@@ -166,10 +165,11 @@ body {
 .card-followers-title {
   display: block; /* Especificamos q este elemento empieze en una nueva linea*/
   text-transform: uppercase;
-  color: var(--desaturated-Blue);
+  color: var(--card-color);
   /* border: 1px solid black; */
   letter-spacing: 4.3px;
   font-size: 0.75em;
+  /* font-weight: 400; */
 }
 .card-today {
   display: flex;
@@ -190,10 +190,10 @@ body {
 
 /* Overview */
 .overview {
-  padding-bottom: 3em;
+  padding-bottom: 1.5em;
 }
 .title-overview {
-  color: var(--gray);
+  color: var(--overview_color);
   font-size: 1.45em;
   margin-top: 2em;
   margin-bottom: 1.3em;
@@ -216,7 +216,7 @@ body {
 }
 .card-small-views {
   /* border: 1px solid purple; */
-  color: var(--gray);
+  color: var(--card-color);
   font-weight: bold;
   font-size: 0.9em;
 }
@@ -302,36 +302,18 @@ body {
 
 /* Modo Dark */
 @media (prefers-color-scheme: dark) {
-  body {
-    background: #1d2029;
-    color: var(--white);
-  }
   :root {
     --cardGray: #252b43;
-  }
-  .header {
-    background: #20222f;
-  }
-  .switch {
-    background-image: linear-gradient(
+    --header-background: #20222f;
+    --body-background: #1d2029;
+    --body-color: hsl(0, 0%, 100%);
+    --switch-background: linear-gradient(
       to right,
       var(--toggle-1),
       var(--toggle-2)
     );
-  }
-  .switch::before {
-    background: var(--very-Dark-Blue);
-  }
-  .card-title {
-    color: var(--desaturated-Blue);
-  }
-  .card-followers-title {
-    color: var(--desaturated-Blue);
-  }
-  .title-overview {
-    color: var(--white);
-  }
-  .card-small-views {
-    color: var(--desaturated-Blue);
+    --togle_ball: hsl(230, 17%, 14%);
+    --card-color: hsl(228, 34%, 66%);
+    --overview_color: hsl(0, 0%, 100%);
   }
 }
